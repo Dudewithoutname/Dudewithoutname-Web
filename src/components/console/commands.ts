@@ -21,9 +21,9 @@ function helpCmd(lines: CLine[]): CLine[]{
     const lb = new LineBuilder(lines);
     
     lb.add('# Help');
-    lb.add('help - displays all usefull commands');
+    lb.add('help - displays all useful commands');
     lb.add('catfact - changes your life by giving you a random cat fact');
-    lb.add('security - recommends you professional security');
+    lb.add('security - recommends you the professional security company');
 
     return lb.raw;
 } 
@@ -32,6 +32,7 @@ function kotlarCmd(lines: CLine[]): CLine[]{
     const lb = new LineBuilder(lines);
     
     for(let i = 0; i < 3; i++) lb.add('Kotlar Security s.r.o.');
+    
     window.location.href = 'https://youtu.be/U2bezBlEsRw?t=10';
 
     return lb.raw;
