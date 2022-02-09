@@ -61,9 +61,8 @@ a::selection, div::selection, p::selection, input::selection, span::selection{
     }
 
     input{
-        margin-left: 10px;
+        margin-left: -8px;
         width: calc(100% - 170px);
-        position: absolute;
         caret-color: #ffffff;
         color: #ffffff;
         font-size: 22px;

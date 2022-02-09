@@ -28,6 +28,10 @@ export class Console extends React.Component<{}, CState>{
                     content: "version 1.0.0 - Feb 2021",
                     id: 1,
                 },
+                {
+                    content: "type 'help' for ",
+                    id: 2,
+                },
             ]
         }
     }

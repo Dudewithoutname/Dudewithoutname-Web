@@ -19,7 +19,6 @@ function App() {
                 <a href="https://opensea.io/Dudewithoutname">Opensea</a>
             </Navigation>
             {cli ? <Console /> : null}
-
         </>
     );
 }
