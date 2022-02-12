@@ -1,5 +1,5 @@
-import React from "react";
-import { parseCommand } from "./commands";
+import React from 'react';
+import { parseCommand } from './commands';
 
 
 export type CLine = {
@@ -21,15 +21,15 @@ export class Console extends React.Component<{}, CState>{
             input: '',
             lines: [
                 {
-                    content: "Welcome to the Dude CLI",
+                    content: 'Welcome to the Dude CLI',
                     id: 0,
                 },
                 {
-                    content: "version 1.0.0 - Feb 2021",
+                    content: 'version 1.0.0 - Feb 2021',
                     id: 1,
                 },
                 {
-                    content: "type 'help' for ",
+                    content: 'type \'help\' for ',
                     id: 2,
                 },
             ]
@@ -38,14 +38,14 @@ export class Console extends React.Component<{}, CState>{
 
     render() {
         return (
-          <div className="console">
-              <div className="console-window">
+          <div className='console'>
+              <div className='console-window'>
                   {
                      this.state.lines.map((line: CLine) => (
                           <p key={line.id}>{line.content}</p>
                       ))
                   }
-                  <span>{"user@Dude:# "} <input spellCheck="false" type="text" value={this.state.input} onChange={e => this.onChanged(e)} onKeyPress={async e => await this.onKeyPressed(e)}/></span>
+                  <span>{'user@Dude:# '} <input spellCheck='false' type='text' value={this.state.input} onChange={e => this.onChanged(e)} onKeyPress={async e => await this.onKeyPressed(e)}/></span>
               </div>
           </div>
         );

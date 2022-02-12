@@ -1,4 +1,4 @@
-import { CLine } from "./console";
+import { CLine } from './console';
 
 export class LineBuilder{
     public raw: CLine[] = [];
