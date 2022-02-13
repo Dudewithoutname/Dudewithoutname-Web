@@ -3,11 +3,10 @@ import { Canvas, ThreeEvent } from '@react-three/fiber';
 import { useState } from 'react';
 import { Explosion } from './effects/explosion';
 import '../styles/style.scss';
-import { EffectComposer, Glitch } from '@react-three/postprocessing';
 
 export function Space(){
-    const [hitCount, setHitCount] = useState(0);
-    const [headText, setHeadText] = useState('Welcome to my WORLD');
+    const [hitCount, setHitCount] = useState<number>(0);
+    const [headText, setHeadText] = useState<string>('Welcome to my WORLD');    
 
     const onClick = (e: ThreeEvent<MouseEvent>) =>{
         setHitCount(hitCount + 1);
@@ -33,10 +32,7 @@ export function Space(){
             <Text color='#ffffff' anchorX='center' anchorY='middle' font='/resources/bebasneue.ttf' fontSize={0.5} onClick={e => onClick(e)} {...null}>
                 {headText}
             </Text>
-            {makeExplosions()}
-            {hitCount >= 100 ? <EffectComposer><Glitch  /></EffectComposer> : null}
-            
-
+            {makeExplosions()} 
         </Canvas>
     );
 }
