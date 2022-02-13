@@ -3,6 +3,7 @@ import { Canvas, ThreeEvent } from '@react-three/fiber';
 import { useState } from 'react';
 import { Explosion } from './effects/explosion';
 import '../styles/style.scss';
+import { EffectComposer, Glitch } from '@react-three/postprocessing';
 
 export function Space(){
     const [hitCount, setHitCount] = useState(0);
@@ -33,6 +34,9 @@ export function Space(){
                 {headText}
             </Text>
             {makeExplosions()}
+            {hitCount >= 100 ? <EffectComposer><Glitch  /></EffectComposer> : null}
+            
+
         </Canvas>
     );
 }
