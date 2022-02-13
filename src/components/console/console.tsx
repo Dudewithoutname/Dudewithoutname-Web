@@ -29,7 +29,7 @@ export class Console extends React.Component<{}, CState>{
                     id: 1,
                 },
                 {
-                    content: 'type \'help\' for ',
+                    content: 'type \'help\' for further info',
                     id: 2,
                 },
             ]
